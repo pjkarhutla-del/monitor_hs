@@ -19,10 +19,10 @@ def check_environment():
     logging.info("=== CHECKING ENVIRONMENT ===")
     
     bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
-    channel_id = os.getenv('TELEGRAM_CHANNEL_ID_PAPUA')
+    channel_id = os.getenv('TELEGRAM_CHANNEL_ID')
     
     logging.info(f"TELEGRAM_BOT_TOKEN: {'Set' if bot_token else 'Not set'}")
-    logging.info(f"TELEGRAM_CHANNEL_ID_PAPUA: {'Set' if channel_id else 'Not set'}")
+    logging.info(f"TELEGRAM_CHANNEL_ID: {'Set' if channel_id else 'Not set'}")
     
     required_files = [
         'run_daily_monitor.py',
