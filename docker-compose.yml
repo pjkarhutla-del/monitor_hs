@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  sipongi:
+    build: .
+    container_name: sipongi
+    env_file:
+      - .env
+    depends_on:
+      - wa_server
+    restart: unless-stopped
+
+  wa_server:
+    build: ./wa_server
+    container_name: sipongi-wa
+    env_file:
+      - ./wa_server/.env
+    volumes:
+      - ./wa_server/auth:/app/auth
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
