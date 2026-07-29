@@ -13,7 +13,7 @@ class ChannelNotifier:
     def __init__(self):
 
         self.telegram_bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
-        self.telegram_channel_id = os.getenv('TELEGRAM_CHANNEL_ID_NTB')
+        self.telegram_channel_id = os.getenv('TELEGRAM_CHANNEL_ID')
         self.base_url = f"https://api.telegram.org/bot{self.telegram_bot_token}"
         
     def send_channel_message(self, message):
